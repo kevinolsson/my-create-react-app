@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "index.scss";
-import App from "App";
-import { Provider } from "react-redux";
+import { App } from "App";
 import { configureStore } from "@reduxjs/toolkit";
 import { reducer } from "state/reducers";
 import * as serviceWorker from "serviceWorker";
+import "index.scss";
 
 const store = configureStore({
   reducer
@@ -13,9 +12,7 @@ const store = configureStore({
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <App store={store} />
   </React.StrictMode>,
   document.getElementById("root")
 );
