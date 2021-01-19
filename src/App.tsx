@@ -1,14 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Router } from "Router";
 import { Provider } from "react-redux";
 
-export const App = ({ store }) => (
+type AppProps = { store: any };
+export const App = ({ store }: AppProps) => (
   <Provider store={store}>
     <Router />
   </Provider>
 );
-
-App.propTypes = {
-  store: PropTypes.object
-};

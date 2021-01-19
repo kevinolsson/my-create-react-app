@@ -3,8 +3,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount } from "state/actions";
 import styles from "./Counter.module.scss";
 
-export function Counter() {
-  const count = useSelector(state => state.counter.value);
+interface RootState {
+  counter: {
+    value: string;
+  };
+}
+export const Counter = () => {
+  const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
   const [incrementAmount, setIncrementAmount] = useState("2");
 
@@ -45,4 +50,4 @@ export function Counter() {
       </div>
     </div>
   );
-}
+};
