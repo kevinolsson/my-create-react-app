@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Updates
-**1/24/2021** Changed entire project to TypeScript. I'm way behind the curve here but I have to get going right.
+`1/24/2021` Changed entire project to TypeScript. I'm way behind the curve here but I have to get going right.
 
 ## Available Scripts
 
