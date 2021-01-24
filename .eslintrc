@@ -3,7 +3,6 @@
   "plugins": ["prettier", "eslint-plugin-react"],
   "rules": {
     "prettier/prettier": "error",
-    "react/prop-types": "error",
     "no-console": "error",
     "no-var": "error",
     "camelcase": ["error", { "properties": "never" }],
