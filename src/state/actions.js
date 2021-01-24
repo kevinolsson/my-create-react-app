@@ -1,7 +1,3 @@
-import * as slices from "state/slices";
+import { counterSlice } from "components/Counter/CounterSlice";
 
-export const {
-  increment,
-  decrement,
-  incrementByAmount
-} = slices.counterSlice.actions;
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;

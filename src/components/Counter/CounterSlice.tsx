@@ -1,12 +1,6 @@
-import { createSlice, CaseReducer, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 type CounterSliceState = { value: number };
-type State = number;
-const incrementByAmount: CaseReducer<State, PayloadAction<number>> = (
-  state,
-  action
-) => (state += action.payload);
-
 export const counterSlice = createSlice({
   name: "counter",
   initialState: { value: 0 } as CounterSliceState,
@@ -17,6 +11,9 @@ export const counterSlice = createSlice({
     decrement: state => {
       state.value -= 1;
     },
-    incrementByAmount
+    incrementByAmount: (state, action: PayloadAction<number>) => ({
+      ...state,
+      value: state.value + action.payload
+    })
   }
 });
