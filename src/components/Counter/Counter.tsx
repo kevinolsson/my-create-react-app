@@ -8,6 +8,7 @@ interface RootState {
     value: string;
   };
 }
+
 export const Counter = () => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
